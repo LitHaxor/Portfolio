@@ -5,39 +5,33 @@ import Layout from '../components/layout'
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
+import thumb01 from '../assets/images/thumbs/mgbhs.jpg'
+import thumb02 from '../assets/images/thumbs/dmrc.jpg'
+import thumb03 from '../assets/images/thumbs/aiub.jpg'
 
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
+import full01 from '../assets/images/fulls/mgbhs.png'
+import full02 from '../assets/images/fulls/dmrc.jpg'
+import full03 from '../assets/images/fulls/aiub.png'
+
 
 const DEFAULT_IMAGES = [
-    { id: '1', source: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', source: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', source: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', source: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', source: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', source: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
+    { id: '1', source: full03, thumbnail: thumb03, caption: 'Started Undergraduate 2020', description: 'Studying CS in American International University- Bangladesh', link:"http://aiub.edu"},
+    { id: '2', source: full02, thumbnail: thumb02, caption: 'HSC Graduation 2019', description: 'Completed HSC from Dr. Mahbubur Rahman Mollah College', link:"http://dmrc.info"},
+    { id: '3', source: full01, thumbnail: thumb01, caption: 'SSC Graduation 2017', description: 'Completed SSC from Motijheel Govt Boys High school.',link: 'http://mgbhs.com' },
+    
+    
 ];
 
 class HomeIndex extends React.Component {
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
+        const siteTitle = "Hasan Ahamed"
         const siteDescription = "Site description"
 
         return (
             <Layout>
                 <Helmet>
-                        <title>{siteTitle}</title>
+                        <title>LitHaxor!</title>
                         <meta name="description" content={siteDescription} />
                 </Helmet>
 
@@ -45,33 +39,34 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
+                            <h2>Hi, It's Hasan </h2>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+                        <p>I mess with Web interface. I know HTML, JS, NODE.js and Basic C/C++ and Python, I want to know more. <br/>
+                        Intrested in learning Data Science and app devolopment. <br/>
+                        Willing to perticipate ICPC and coding competiton.</p>
                         <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
+                            <li><a href="\knowmore.js" className="button">Know more</a></li>
                         </ul>
                     </section>
 
                     <section id="two">
-                        <h2>Recent Work</h2>
+                        <h2>Timeline</h2>
 
                         <Gallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({
                             source,
                             thumbnail,
                             caption,
                             description
-                        }))} />
+                        }))} /> 
 
                         <ul className="actions">
                             <li><a href="#" className="button">Full Portfolio</a></li>
                         </ul>
                     </section>
-
+                        
                     <section id="three">
-                        <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+                        <h2>About me</h2>
+                        <p>Currently studying <b>UG Bsc CS </b> in <a href= "http://aiub.edu/">AIUB</a>.<br/> connect me via sending message</p>
                         <div className="row">
                             <div className="8u 12u$(small)">
                                 <form method="post" action="#">
@@ -89,17 +84,16 @@ class HomeIndex extends React.Component {
                                 <ul className="labeled-icons">
                                     <li>
                                         <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        1234 Somewhere Rd.<br />
-                                        Nashville, TN 00000<br />
-                                        United States
+                                        North Jatrabari,<br />
+                                        Dhaka, DK 1204
                                     </li>
                                     <li>
                                         <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        000-000-0000
+                                        +880-1623-785124 
                                     </li>
                                     <li>
                                         <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="#">hello@untitled.tld</a>
+                                        <a href="http://gmail.com">officials.hasan@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>

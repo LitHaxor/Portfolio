@@ -8,5 +8,3 @@ yarn.lock
 
 # Build directory
 .DS_Store
-src
-/node_modules
