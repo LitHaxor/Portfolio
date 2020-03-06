@@ -1,3 +1,4 @@
+node_modules
 # Project dependencies
 .cache
 node_modules
@@ -6,5 +7,6 @@ package-lock.json
 yarn.lock
 
 # Build directory
-/public
 .DS_Store
+src
+/node_modules
