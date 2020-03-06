@@ -39,9 +39,9 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Hi, It's  LitHaxor  </h2>
+                            <h2>Hi, It's  Hasan </h2>
                         </header>
-                        <p>I mess with Website interface. I know HTML, JS, NODE.js and Basic C/C++ and Python, I want to know more. <br/>
+                        <p>Like to mess with Website interface. I know HTML, JS, NODE.js and Basic C/C++ and Python, I want to know more. <br/>
                         Intrested in learning Data Science and app devolopment. <br/>
                         Willing to perticipate ICPC and coding competiton.</p>
                         <ul className="actions">
@@ -85,7 +85,7 @@ class HomeIndex extends React.Component {
                                     <li>
                                         <h3 className="icon fa-home"><span className="label">Address</span></h3>
                                         North Jatrabari,<br />
-                                        Dhaka, DK 1204
+                                        Dhaka, DH 1204
                                     </li>
                                     <li>
                                         <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
