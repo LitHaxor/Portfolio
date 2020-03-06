@@ -39,9 +39,9 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Hi, It's LitHaxor </h2>
+                            <h2>Hi, It's  LitHaxor  </h2>
                         </header>
-                        <p>I mess with Web interface. I know HTML, JS, NODE.js and Basic C/C++ and Python, I want to know more. <br/>
+                        <p>I mess with Website interface. I know HTML, JS, NODE.js and Basic C/C++ and Python, I want to know more. <br/>
                         Intrested in learning Data Science and app devolopment. <br/>
                         Willing to perticipate ICPC and coding competiton.</p>
                         <ul className="actions">
