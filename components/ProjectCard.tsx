@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
 // TODO Github
 import { MdClose } from "react-icons/md";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 const ProjectCard: FunctionComponent<{ project: Project }> = ({
   project: {
@@ -18,25 +19,26 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
   const [showDetail, setShowDetail] = useState(false);
   // TODO scroll to top
   return (
-    <>
+    <AnimateSharedLayout type="crossfade">
       {/* //step 1 */}
-       <Image
-        src={image_path}
-        alt={name}
-        layout="responsive"
-        width={300}
-        height={150}
-        onClick={() => setShowDetail(true)}
-        className="cursor-pointer "
-      /> 
+      <motion.div layoutId={name} onClick={() => setShowDetail(true)}>
+        <Image
+          src={image_path}
+          alt={name}
+          layout="responsive"
+          width={300}
+          height={150}
+          className="cursor-pointer "
+        /> 
 
-      <p className="my-2 text-center">{name}</p>
+        <motion.p className="my-2 text-center">{name}</motion.p>
+      </motion.div>
       {/* //step 1 */}
-
+      <AnimatePresence>
       {showDetail && (
-        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 overflow-hidden dark:bg-dark-200 dark:text-gray-100 md:grid-cols-2 gap-x-12 ">
-          <div>
-            <div className="border-4 border-gray-100 ">
+        <motion.div layoutId={name} className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 overflow-hidden dark:bg-dark-200 dark:text-gray-100 md:grid-cols-2 gap-x-12 ">
+          <motion.div>
+            <motion.div className="border-4 border-gray-100 ">
               <Image
                 src={image_path}
                 alt={name}
@@ -46,47 +48,48 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
                 height={150}
               /> 
               
-            </div>
-            <div className="flex justify-center my-4 space-x-3">
-              <a
+            </motion.div>
+            <motion.div className="flex justify-center my-4 space-x-3">
+              <motion.a
                 href={github_url}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-dark-500 "
               >
                 <AiFillGithub /> <span>Github</span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={deployed_url}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-dark-500"
               >
                 <AiFillProject /> <span>Project</span>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h2 className="mb-3 text-xl font-medium md:text-2xl ">{name}</h2>
-            <h3 className="my-3 text-base font-medium">{description}</h3>
+              </motion.a>
+            </motion.div>
+          </motion.div>
+          <motion.div>
+            <motion.h2 className="mb-3 text-xl font-medium md:text-2xl ">{name}</motion.h2>
+            <motion.h3 className="my-3 text-base font-medium">{description}</motion.h3>
 
-            <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
+            <motion.div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
               {key_techs.map((value, i) => (
-                <span
+                <motion.span
                   key={i}
                   className="p-1 px-2 my-1 bg-gray-300 rounded-sm dark:bg-dark-500"
                 >
                   {value}
-                </span>
+                </motion.span>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <button
+          <motion.button
             className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200"
             onClick={() => setShowDetail(false)}
           >
             <MdClose size={30} />
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       )}
-    </>
+      </AnimatePresence>
+    </AnimateSharedLayout>
   );
 };
 
