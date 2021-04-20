@@ -7,7 +7,7 @@ const Sidebar = () => {
    return (
       <>
         <Image
-            src={`https://scontent.fdac116-1.fna.fbcdn.net/v/t1.6435-9/82470829_2455944134644320_6597264109631176704_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=174925&_nc_ohc=1K44IeOFmAIAX9BoBiy&_nc_ht=scontent.fdac116-1.fna&oh=d659668a424279df71b434451e6198e7&oe=60A3499D`}
+            src='/img/aiub.jpg'
             alt="Picture of the author"
             width={250}
             height={250}
