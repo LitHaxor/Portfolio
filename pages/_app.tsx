@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
      <ThemeProvider attribute="class">
          <div className='grid dark:text-white  grid-cols-12 gap-6 px-5 my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-36 xl:px-48 '>
          {/* // do this div style later (after putting the content) */}
-         <div className='h-full col-span-12 p-4 shadow-md dark:shadow-custom-dark text-base text-center dark:bg-dark-500  bg-white  lg:col-span-3 rounded-2xl '>
+         <div className='h-full col-span-12 p-4  shadow-md dark:shadow-custom-dark text-base text-center dark:bg-dark-500  bg-white  lg:col-span-3 rounded-2xl '>
             {/* //!sidebar */}
             <Sidebar />
             

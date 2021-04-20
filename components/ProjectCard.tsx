@@ -21,7 +21,7 @@ const ProjectCard: FunctionComponent<{ project: Project }> = ({
   return (
     <AnimateSharedLayout type="crossfade">
       {/* //step 1 */}
-      <motion.div layoutId={name} onClick={() => setShowDetail(true)}>
+      <motion.div  layoutId={name} onClick={() => setShowDetail(true)}>
         <Image
           src={image_path}
           alt={name}

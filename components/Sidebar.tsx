@@ -1,18 +1,13 @@
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai'
-import { GiCloudDownload } from 'react-icons/gi'
 import { GoLocation } from 'react-icons/go'
 import Image from 'next/image';
-import {useTheme} from 'next-themes';
+import {IoMdGitNetwork} from 'react-icons/io'
+import {CgWorkAlt} from 'react-icons/cg'
 const Sidebar = () => {
-   const {theme, setTheme} = useTheme()
-
-   const toggleTheme = () =>{
-      setTheme(theme === 'light' ? 'dark' : 'light')
-   }
    return (
       <>
         <Image
-            src="/img/bruh.jpg"
+            src={`https://scontent.fdac116-1.fna.fbcdn.net/v/t1.6435-9/82470829_2455944134644320_6597264109631176704_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=174925&_nc_ohc=1K44IeOFmAIAX9BoBiy&_nc_ht=scontent.fdac116-1.fna&oh=d659668a424279df71b434451e6198e7&oe=60A3499D`}
             alt="Picture of the author"
             width={250}
             height={250}
@@ -21,16 +16,15 @@ const Sidebar = () => {
          <h3 className='my-4 text-3xl font-medium dark:text-white tracking-wider font-kaushan'>
             <span className='text-green-500'>Hasan</span> Ahamed
          </h3>
-         <p className='px-2 py-1 my-3 bg-gray-200 dark:bg-dark-100 rounded-full dark:bg-black-500'>
-            Full-Stack Developer
+         <p className='flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-100 rounded-full dark:bg-black-500'>
+           <IoMdGitNetwork className="w-6 h-6"/> Full-Stack Developer
          </p>
          {/* Resume */}
          <a
-            href='/assets/Sumit Dey Resume.pdf'
-            download='Sumit Dey Resume.pdf'
+            href='/Resume'
             className='flex items-center justify-center px-2 py-1 my-2 dark:bg-dark-100 bg-gray-200 rounded-full cursor-pointer dark:bg-black-500'>
-            <GiCloudDownload className='w-6 h-6' />
-            <span> Download Resume</span>
+            <CgWorkAlt className='w-6 h-6' />
+            <span> Hire Me</span>
          </a>
 
          {/* Socials */}
@@ -66,12 +60,7 @@ const Sidebar = () => {
             onClick={() => window.open('mailto:officials.hasan@gmail.com')}>
             Email me
          </button>
-         <button
-            onClick={toggleTheme}
-            className='w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-blue-400 to-green-500 focus:outline-none'>
-            {/* //TODO remove bg black */}
-            Toggle Theme
-         </button>
+        
       </>
    )
 }

@@ -6,8 +6,7 @@ export default function Home() {
     <div className="flex flex-col px-6 pt-1 flex-grow">
       <h5 className="text-xl my-3 font-medium">
           Currently student of BSc in Computer Science in American International University-Bangladesh. 
-          <br/> I can manage frontend and backend development and manage databases. Expertise at docker, AWS, 
-          and other cloud platform. 
+          <br/>I'm a full-stack developer capable of developing robust, scaleable client and server software.
       </h5>
       <div className="bg-gray-50 dark:bg-dark-500 p-2 rounded-md">
         <h1 className="text-xl font-bold">My Expertise</h1>

@@ -30,7 +30,7 @@ const Portfolio = () => {
           {projects.map((project,id) => (
             <div
               key={id}
-              className="col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 sm:col-span-6 lg:col-span-4"
+              className="col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 sm:col-span-6 lg:col-span-4 hover:bg-gray-300"
             >
               <ProjectCard project={project} key={id} />
             </div>

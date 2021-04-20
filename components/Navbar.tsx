@@ -1,7 +1,9 @@
 import React, { FunctionComponent, useEffect } from 'react'
 import Link from 'next/link';
 import {useRouter} from 'next/router'
-
+import {useTheme} from 'next-themes'
+import {FiMoon, FiSun} from 'react-icons/fi'
+import { FaMoon } from 'react-icons/fa';
 interface Items {
     active: string,
     setActive: Function,
@@ -26,7 +28,25 @@ const NavItem:FunctionComponent<Items> = ({
 }
 
 
+const DarkButton = ({theme, toggleTheme}) =>{
+   if(theme === 'dark' ){
+       return (
+         
+              <FiSun onClick={toggleTheme} className="h-6 w-6 text-yellow-600 inline-block cursor-pointer"/>
+            
+       )
+    }
+   return (
+           <FaMoon onClick={toggleTheme} className="h-6 w-6 inline-block cursor-pointer text-black"/>
+   )
+}
+
 const Navbar = () => {
+    const {theme, setTheme} = useTheme()
+    
+    const toggleTheme = () =>{
+       setTheme(theme === 'light' ? 'dark' : 'light')
+    }
     const {pathname} = useRouter();
     const [active, setActive] = React.useState<string>();
     useEffect(
@@ -35,8 +55,12 @@ const Navbar = () => {
             else if (pathname==="/Portfolio") setActive('Portfolio')
             else if(pathname==="/Resume ") setActive('Resume')
         },[])
+
+    useEffect(()=>{
+        console.log('theme:', theme);
+    },[theme])
     return (
-        <div className="flex  justify-between my-6">
+        <div className="flex items-center  justify-between my-6">
             <span className="font-bold text-green-500 text-xl mx-6 pt-2 pr-2 border-b-4 text-green border-green-500">
                 {active}
             </span>
@@ -56,6 +80,9 @@ const Navbar = () => {
                     setActive={setActive} 
                     name="Resume"
                     route="/Resume"/>
+                <div className="inline-block">
+                    <DarkButton theme={theme} toggleTheme={toggleTheme}/>
+                </div>
             </div>
         </div>
     )
