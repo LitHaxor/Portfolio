@@ -17,3 +17,15 @@ export interface School{
    degree: string,
    graduation: string
 }
+
+export interface Project {
+   name:string,
+   description: string,
+   image_path: string,
+   deployed_url: string,
+   github_url: string,
+   categories: Category[],
+   key_techs: string[],
+}
+
+export type Category = 'react' | 'node' | 'express' | 'nextjs' | 'postgres' | 'mongoDB' | 'firebase' | 'docker' | 'express' | 'Actix'
